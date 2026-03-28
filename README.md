@@ -195,8 +195,7 @@ REST APIs available at: http://localhost:8080/
 
 Example endpoints:
 
-       *      GET /products → List all products
-       
+       *      GET /products → List all products       
       
        *      POST /users/register → Register new user
 
