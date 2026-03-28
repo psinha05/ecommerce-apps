@@ -152,3 +152,62 @@ Here’s how a typical request flows through the system:
      *     REST APIs: APIs exposed for front-end or external apps
 
      *     Validation & Exception Handling: Ensures data consistency and proper error messages
+
+
+🛠 Key Features
+Product Management: Add, update, delete, and view products
+User Management: Registration, login, and profile management
+Order Processing: Place orders, manage cart, checkout functionality
+Database Integration: Uses JPA/Hibernate for relational DB management
+REST APIs: APIs exposed for front-end or external apps
+Validation & Exception Handling: Ensures data consistency and proper error messages
+
+
+⚙️ Setup Instructions
+
+
+a).    Clone the repository
+
+          git clone https://github.com/username/ecommerce-app.git
+          cd ecommerce-app
+          
+b).     Configure Database
+
+         Edit src/main/resources/application.properties:
+         
+                *    spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db
+                *    spring.datasource.username=root
+                *    spring.datasource.password=your_password
+                *    spring.jpa.hibernate.ddl-auto=update
+
+                
+c).      Build and Run
+
+          # Using Maven
+          
+                *   mvn clean install
+                *   mvn spring-boot:run
+
+                
+d).       Access the Application
+
+REST APIs available at: http://localhost:8080/
+
+Example endpoints:
+
+       *      GET /products → List all products
+       
+      
+       *      POST /users/register → Register new user
+
+       *      POST /orders → Place a new order
+
+       
+💡 Notes
+
+
+Use Postman or any REST client to test APIs.
+
+You can initialize data using data.sql file.
+
+Secure sensitive properties with .env or Spring Cloud Config for production.
