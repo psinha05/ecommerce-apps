@@ -83,3 +83,72 @@ ecommerce-app/
 
 
 └── README.md
+
+
+
+
+⚡ End-to-End Flow
+
+Here’s how a typical request flows through the system:
+
+1. Client Request (REST API)
+   
+         *  A client sends a request to the application, e.g., GET /products or POST /orders.
+
+   
+2. Controller Layer
+
+       *   REST Controllers handle incoming HTTP requests and map them to service calls.
+   
+           Example: ProductController handles all product-related APIs.
+
+   
+3.  Service Layer (Business Logic)
+
+   *      Controllers delegate to Service classes for business logic like:
+
+                @  Validating inputs
+
+                @  Calculating totals
+
+                @  Applying discounts
+      
+                @   Managing stock
+
+      
+4.  Repository Layer (Database Access)
+
+   *    Services use Spring Data JPA Repositories to interact with the database.
+   *    CRUD operations are performed on entities (Product, User, Order).
+
+     
+5.  Database Interaction
+ 
+   *    Entities are mapped to tables using JPA/Hibernate.
+   *    Database can be MySQL/PostgreSQL (or H2 for development).
+
+
+6.  Response Back to Client
+
+   *    Service returns the result to the controller
+   *    Controller sends JSON response to the client
+
+
+🔗 E2E Diagram
+
+  <img width="391" height="946" alt="mermaid-diagram(2)" src="https://github.com/user-attachments/assets/9320e6cb-ca28-4884-9761-d59e9f9a0d90" />
+
+
+🛠 Key Features
+
+     *      Product Management: Add, update, delete, and view products
+     
+     *      User Management: Registration, login, and profile management
+     
+     *      Order Processing: Place orders, manage cart, checkout functionality
+
+     *     Database Integration: Uses JPA/Hibernate for relational DB management
+
+     *     REST APIs: APIs exposed for front-end or external apps
+
+     *     Validation & Exception Handling: Ensures data consistency and proper error messages
